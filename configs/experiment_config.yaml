@@ -1,0 +1,62 @@
+model:
+  name: "distilbert-base-uncased"
+  max_length: 128
+
+datasets:
+  imdb:
+    hf_name: "imdb"
+    num_labels: 2
+    text_col: "text"
+    label_col: "label"
+    train_size: 20000
+    val_size: 2500
+    test_size: 2500
+  ag_news:
+    hf_name: "ag_news"
+    num_labels: 4
+    text_col: "text"
+    label_col: "label"
+    train_size: 80000
+    val_size: 10000
+    test_size: 7600
+  banking77:
+    hf_name: "banking77"
+    num_labels: 77
+    text_col: "text"
+    label_col: "label"
+    train_size: 8000
+    val_size: 1000
+    test_size: 3080
+
+training:
+  epochs: 10
+  batch_size: 32
+  learning_rate: 2.0e-5
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  seed: 42
+
+pruning:
+  sparsity_levels: [0.20, 0.30, 0.42, 0.50]
+  target_sparsity: 0.42
+  fine_tune_epochs: 2
+  fine_tune_lr: 5.0e-6
+
+  observability:
+    num_batches: 50
+    sensitivity_reduction: "mean"
+    head_score_aggregation: "l2"
+
+  hybrid:
+    obs_weight: 0.5
+    mag_weight: 0.5
+
+  lottery_ticket:
+    rewinding_epoch: 1
+    mask_rounds: 3
+
+paths:
+  checkpoints: "results/checkpoints"
+  logs: "results/logs"
+  figures: "results/figures"
+  tables: "results/tables"

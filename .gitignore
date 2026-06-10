@@ -1,0 +1,27 @@
+# ── Large artifacts (share via HF Hub, not git) ──
+results/checkpoints/
+results/logs/
+*.safetensors
+*.bin
+
+# ── Mihail's files ──
+src/methods/magnitude_pruning.py
+src/methods/lottery_ticket.py
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ── Environments ──
+.venv/
+venv/
+env/
+
+# ── OS / editor ──
+.DS_Store
+.vscode/
+.idea/
+
+notebooks/
