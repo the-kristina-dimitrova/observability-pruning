@@ -15,6 +15,7 @@ import sys
 from pathlib import Path
 
 import torch
+from tqdm import tqdm
 import yaml
 from transformers import DistilBertForSequenceClassification
 

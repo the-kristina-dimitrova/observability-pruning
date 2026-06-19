@@ -1,0 +1,24 @@
+[
+  {
+    "method": "Baseline (unpruned)",
+    "dataset": "ag_news",
+    "sparsity": 0.0,
+    "accuracy": 0.9389473684210526,
+    "f1_macro": 0.939074834723409,
+    "params_total": 66956548,
+    "params_nonzero": 66956548,
+    "compression_ratio": 1.0,
+    "inference_ms": 8.285724608195327
+  },
+  {
+    "method": "Observability",
+    "dataset": "ag_news",
+    "sparsity": 0.2,
+    "accuracy": 0.9377631578947369,
+    "f1_macro": 0.9378255513646844,
+    "params_total": 64201348,
+    "params_nonzero": 64201348,
+    "compression_ratio": 0.9588509252298969,
+    "inference_ms": 8.131215529087852
+  }
+]

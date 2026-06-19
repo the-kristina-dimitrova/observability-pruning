@@ -8,17 +8,17 @@
     "params_total": 66955010,
     "params_nonzero": 66955010,
     "compression_ratio": 1.0,
-    "inference_ms": 10.313814381782931
+    "inference_ms": 10.172295343216296
   },
   {
     "method": "Observability",
     "dataset": "imdb",
-    "sparsity": 0.42,
-    "accuracy": 0.872,
-    "f1_macro": 0.8719933641359968,
-    "params_total": 61051010,
-    "params_nonzero": 61051010,
-    "compression_ratio": 0.9118213857334948,
-    "inference_ms": 8.73004070805869
+    "sparsity": 0.5,
+    "accuracy": 0.8676,
+    "f1_macro": 0.8675994703978815,
+    "params_total": 59870210,
+    "params_nonzero": 59870210,
+    "compression_ratio": 0.8941856628801937,
+    "inference_ms": 8.808918228031054
   }
 ]

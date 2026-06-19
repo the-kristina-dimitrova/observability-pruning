@@ -203,13 +203,38 @@ def prune_by_observability(
     return model
 
 
-def _remove_attention_heads(
-    model: DistilBertForSequenceClassification,
-    heads_to_prune: set[tuple[int, int]],
-) -> None:
-    """Physically remove the selected attention heads (shrinks the matrices)."""
+def _prune_linear(layer: nn.Linear, keep: torch.Tensor, dim: int) -> nn.Linear:
+    """New Linear keeping only `keep` indices along `dim` (0 = outputs, 1 = inputs)."""
+    W = layer.weight.index_select(dim, keep).detach().clone()
+    if layer.bias is not None:
+        b = layer.bias.index_select(0, keep).detach().clone() if dim == 0 else layer.bias.detach().clone()
+    else:
+        b = None
+    new = nn.Linear(W.size(1), W.size(0), bias=b is not None)
+    new.weight = nn.Parameter(W)
+    if b is not None:
+        new.bias = nn.Parameter(b)
+    return new.to(layer.weight.device)
+
+
+def _remove_attention_heads(model, heads_to_prune):
+    """Physically remove the selected heads by shrinking the attention matrices."""
     by_layer: dict[int, list[int]] = {}
-    for (layer_idx, head_idx) in heads_to_prune:
-        by_layer.setdefault(layer_idx, []).append(head_idx)
-    if by_layer:
-        model.prune_heads(by_layer)
+    for (l, h) in heads_to_prune:
+        by_layer.setdefault(l, []).append(h)
+
+    for layer_idx, heads in by_layer.items():
+        attn = model.distilbert.transformer.layer[layer_idx].attention
+        head_dim = attn.dim // attn.n_heads                      # 64
+        remove = set(heads)
+        keep_dims = [d for h in range(attn.n_heads) if h not in remove
+                       for d in range(h * head_dim, (h + 1) * head_dim)]
+        keep = torch.tensor(keep_dims, dtype=torch.long, device=attn.q_lin.weight.device)
+
+        attn.q_lin   = _prune_linear(attn.q_lin,   keep, dim=0)   # drop output rows
+        attn.k_lin   = _prune_linear(attn.k_lin,   keep, dim=0)
+        attn.v_lin   = _prune_linear(attn.v_lin,   keep, dim=0)
+        attn.out_lin = _prune_linear(attn.out_lin, keep, dim=1)   # drop input cols
+
+        attn.n_heads = attn.n_heads - len(remove)
+        attn.dim     = head_dim * attn.n_heads

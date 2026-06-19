@@ -1,0 +1,24 @@
+[
+  {
+    "method": "Baseline (unpruned)",
+    "dataset": "banking77",
+    "sparsity": 0.0,
+    "accuracy": 0.9149350649350649,
+    "f1_macro": 0.9149111296773904,
+    "params_total": 67012685,
+    "params_nonzero": 67012685,
+    "compression_ratio": 1.0,
+    "inference_ms": 10.330545505059922
+  },
+  {
+    "method": "Observability",
+    "dataset": "banking77",
+    "sparsity": 0.5,
+    "accuracy": 0.8967532467532467,
+    "f1_macro": 0.8964709664764163,
+    "params_total": 59927885,
+    "params_nonzero": 59927885,
+    "compression_ratio": 0.8942767328305081,
+    "inference_ms": 10.207509875811214
+  }
+]

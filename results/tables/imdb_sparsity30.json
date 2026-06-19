@@ -1,0 +1,24 @@
+[
+  {
+    "method": "Baseline (unpruned)",
+    "dataset": "imdb",
+    "sparsity": 0.0,
+    "accuracy": 0.8792,
+    "f1_macro": 0.8791999226879506,
+    "params_total": 66955010,
+    "params_nonzero": 66955010,
+    "compression_ratio": 1.0,
+    "inference_ms": 11.999758428678836
+  },
+  {
+    "method": "Hybrid (Observability+Magnitude)",
+    "dataset": "imdb",
+    "sparsity": 0.3,
+    "accuracy": 0.8712,
+    "f1_macro": 0.8711979391670266,
+    "params_total": 62822210,
+    "params_nonzero": 62822210,
+    "compression_ratio": 0.9382749700134464,
+    "inference_ms": 10.423313302085205
+  }
+]
