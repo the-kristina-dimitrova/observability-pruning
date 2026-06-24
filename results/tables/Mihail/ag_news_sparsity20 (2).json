@@ -1,0 +1,104 @@
+[
+  {
+    "method": "Baseline (unpruned)",
+    "dataset": "ag_news",
+    "sparsity": 0.0,
+    "accuracy": 0.9389473684210526,
+    "f1_macro": 0.939074834723409,
+    "params_total": 66956548,
+    "params_nonzero": 66956548,
+    "compression_ratio": 1.0,
+    "inference_ms": 92.51921977731246,
+    "method_key": "baseline"
+  },
+  {
+    "method": "Magnitude Pruning",
+    "dataset": "ag_news",
+    "sparsity": 0.2,
+    "accuracy": 0.939078947368421,
+    "f1_macro": 0.9391226496012447,
+    "params_total": 64201348,
+    "params_nonzero": 64201348,
+    "compression_ratio": 0.9588509252298969,
+    "inference_ms": 103.18763147059703,
+    "method_key": "magnitude",
+    "pruning_info": {
+      "method": "magnitude",
+      "sparsity_target": 0.2,
+      "heads_total": 72,
+      "heads_pruned": 14,
+      "pruned_heads": [
+        {
+          "layer": 0,
+          "head": 6,
+          "magnitude_score": 13.93016529083252
+        },
+        {
+          "layer": 0,
+          "head": 0,
+          "magnitude_score": 14.156950950622559
+        },
+        {
+          "layer": 0,
+          "head": 4,
+          "magnitude_score": 14.233436584472656
+        },
+        {
+          "layer": 0,
+          "head": 3,
+          "magnitude_score": 14.357356071472168
+        },
+        {
+          "layer": 0,
+          "head": 8,
+          "magnitude_score": 14.359548568725586
+        },
+        {
+          "layer": 0,
+          "head": 9,
+          "magnitude_score": 14.387429237365723
+        },
+        {
+          "layer": 0,
+          "head": 7,
+          "magnitude_score": 14.833272933959961
+        },
+        {
+          "layer": 0,
+          "head": 1,
+          "magnitude_score": 15.213834762573242
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "magnitude_score": 15.442098617553711
+        },
+        {
+          "layer": 1,
+          "head": 3,
+          "magnitude_score": 15.974258422851562
+        },
+        {
+          "layer": 0,
+          "head": 5,
+          "magnitude_score": 16.066709518432617
+        },
+        {
+          "layer": 2,
+          "head": 10,
+          "magnitude_score": 16.239347457885742
+        },
+        {
+          "layer": 1,
+          "head": 5,
+          "magnitude_score": 16.561872482299805
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "magnitude_score": 16.664304733276367
+        }
+      ]
+    }
+  }
+]

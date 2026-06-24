@@ -1,0 +1,287 @@
+[
+  {
+    "method": "Baseline (unpruned)",
+    "dataset": "banking77",
+    "sparsity": 0.0,
+    "accuracy": 0.9149350649350649,
+    "f1_macro": 0.9149111296773904,
+    "params_total": 67012685,
+    "params_nonzero": 67012685,
+    "compression_ratio": 1.0,
+    "inference_ms": 100.40644840204756,
+    "method_key": "baseline"
+  },
+  {
+    "method": "Magnitude Pruning",
+    "dataset": "banking77",
+    "sparsity": 0.3,
+    "accuracy": 0.9051948051948052,
+    "f1_macro": 0.9052855767569863,
+    "params_total": 62879885,
+    "params_nonzero": 62879885,
+    "compression_ratio": 0.9383280941511297,
+    "inference_ms": 92.78037716491603,
+    "method_key": "magnitude",
+    "pruning_info": {
+      "method": "magnitude",
+      "sparsity_target": 0.3,
+      "heads_total": 72,
+      "heads_pruned": 21,
+      "pruned_heads": [
+        {
+          "layer": 0,
+          "head": 6,
+          "magnitude_score": 13.948590278625488
+        },
+        {
+          "layer": 0,
+          "head": 0,
+          "magnitude_score": 14.145527839660645
+        },
+        {
+          "layer": 0,
+          "head": 4,
+          "magnitude_score": 14.235936164855957
+        },
+        {
+          "layer": 0,
+          "head": 3,
+          "magnitude_score": 14.355692863464355
+        },
+        {
+          "layer": 0,
+          "head": 8,
+          "magnitude_score": 14.371650695800781
+        },
+        {
+          "layer": 0,
+          "head": 9,
+          "magnitude_score": 14.397504806518555
+        },
+        {
+          "layer": 0,
+          "head": 7,
+          "magnitude_score": 14.838760375976562
+        },
+        {
+          "layer": 0,
+          "head": 1,
+          "magnitude_score": 15.213303565979004
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "magnitude_score": 15.447005271911621
+        },
+        {
+          "layer": 1,
+          "head": 3,
+          "magnitude_score": 15.970258712768555
+        },
+        {
+          "layer": 0,
+          "head": 5,
+          "magnitude_score": 16.057729721069336
+        },
+        {
+          "layer": 2,
+          "head": 10,
+          "magnitude_score": 16.249746322631836
+        },
+        {
+          "layer": 1,
+          "head": 5,
+          "magnitude_score": 16.561992645263672
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "magnitude_score": 16.678157806396484
+        },
+        {
+          "layer": 1,
+          "head": 11,
+          "magnitude_score": 16.732271194458008
+        },
+        {
+          "layer": 1,
+          "head": 2,
+          "magnitude_score": 16.82404327392578
+        },
+        {
+          "layer": 2,
+          "head": 9,
+          "magnitude_score": 16.89380645751953
+        },
+        {
+          "layer": 1,
+          "head": 6,
+          "magnitude_score": 16.9351863861084
+        },
+        {
+          "layer": 1,
+          "head": 7,
+          "magnitude_score": 17.03976821899414
+        },
+        {
+          "layer": 2,
+          "head": 8,
+          "magnitude_score": 17.235509872436523
+        },
+        {
+          "layer": 0,
+          "head": 11,
+          "magnitude_score": 17.440017700195312
+        }
+      ]
+    }
+  },
+  {
+    "method": "Lottery Ticket",
+    "dataset": "banking77",
+    "sparsity": 0.3,
+    "accuracy": 0.48798701298701297,
+    "f1_macro": 0.4274707963441622,
+    "params_total": 62879885,
+    "params_nonzero": 62879885,
+    "compression_ratio": 0.9383280941511297,
+    "inference_ms": 92.56349646390855,
+    "method_key": "lottery_ticket",
+    "pruning_info": {
+      "method": "lottery_ticket",
+      "sparsity_target": 0.3,
+      "heads_total": 72,
+      "heads_pruned": 21,
+      "mask_rounds": 3,
+      "rewind_used": true,
+      "pruned_heads": [
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 6,
+          "magnitude_score": 13.948590278625488
+        },
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 0,
+          "magnitude_score": 14.145527839660645
+        },
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 4,
+          "magnitude_score": 14.235936164855957
+        },
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 3,
+          "magnitude_score": 14.355692863464355
+        },
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 8,
+          "magnitude_score": 14.371650695800781
+        },
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 9,
+          "magnitude_score": 14.397504806518555
+        },
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 7,
+          "magnitude_score": 14.838760375976562
+        },
+        {
+          "round": 2,
+          "layer": 0,
+          "head": 1,
+          "magnitude_score": 15.213303565979004
+        },
+        {
+          "round": 2,
+          "layer": 2,
+          "head": 1,
+          "magnitude_score": 15.447005271911621
+        },
+        {
+          "round": 2,
+          "layer": 1,
+          "head": 3,
+          "magnitude_score": 15.970258712768555
+        },
+        {
+          "round": 2,
+          "layer": 0,
+          "head": 5,
+          "magnitude_score": 16.057729721069336
+        },
+        {
+          "round": 2,
+          "layer": 2,
+          "head": 10,
+          "magnitude_score": 16.249746322631836
+        },
+        {
+          "round": 2,
+          "layer": 1,
+          "head": 5,
+          "magnitude_score": 16.561992645263672
+        },
+        {
+          "round": 2,
+          "layer": 2,
+          "head": 5,
+          "magnitude_score": 16.678157806396484
+        },
+        {
+          "round": 3,
+          "layer": 1,
+          "head": 11,
+          "magnitude_score": 16.732271194458008
+        },
+        {
+          "round": 3,
+          "layer": 1,
+          "head": 2,
+          "magnitude_score": 16.82404327392578
+        },
+        {
+          "round": 3,
+          "layer": 2,
+          "head": 9,
+          "magnitude_score": 16.89380645751953
+        },
+        {
+          "round": 3,
+          "layer": 1,
+          "head": 6,
+          "magnitude_score": 16.9351863861084
+        },
+        {
+          "round": 3,
+          "layer": 1,
+          "head": 7,
+          "magnitude_score": 17.03976821899414
+        },
+        {
+          "round": 3,
+          "layer": 2,
+          "head": 8,
+          "magnitude_score": 17.235509872436523
+        },
+        {
+          "round": 3,
+          "layer": 0,
+          "head": 11,
+          "magnitude_score": 17.440017700195312
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "dataset": "ag_news",
+    "method_key": "magnitude",
+    "method": "Magnitude Pruning",
+    "sparsity": 0.2,
+    "accuracy": 0.939078947368421,
+    "f1_macro": 0.9391226496012447,
+    "params_total": 64201348,
+    "params_nonzero": 64201348,
+    "compression_ratio": 0.9588509252298969,
+    "inference_ms": 103.18763147059703
+  },
+  {
+    "dataset": "ag_news",
+    "method_key": "magnitude",
+    "method": "Magnitude Pruning",
+    "sparsity": 0.3,
+    "accuracy": 0.939078947368421,
+    "f1_macro": 0.9390849368051395,
+    "params_total": 62823748,
+    "params_nonzero": 62823748,
+    "compression_ratio": 0.9382763878448452,
+    "inference_ms": 99.80696131930675
+  },
+  {
+    "dataset": "ag_news",
+    "method_key": "magnitude",
+    "method": "Magnitude Pruning",
+    "sparsity": 0.42,
+    "accuracy": 0.9348684210526316,
+    "f1_macro": 0.9348250943496457,
+    "params_total": 61052548,
+    "params_nonzero": 61052548,
+    "compression_ratio": 0.9118234112069218,
+    "inference_ms": 96.8531575630504
+  },
+  {
+    "dataset": "ag_news",
+    "method_key": "magnitude",
+    "method": "Magnitude Pruning",
+    "sparsity": 0.5,
+    "accuracy": 0.9357894736842105,
+    "f1_macro": 0.935768425846514,
+    "params_total": 59871748,
+    "params_nonzero": 59871748,
+    "compression_ratio": 0.8941880934483062,
+    "inference_ms": 93.81744381096938
+  }
+]

@@ -1,0 +1,214 @@
+[
+  {
+    "method": "Baseline (unpruned)",
+    "dataset": "ag_news",
+    "sparsity": 0.0,
+    "accuracy": 0.9389473684210526,
+    "f1_macro": 0.939074834723409,
+    "params_total": 66956548,
+    "params_nonzero": 66956548,
+    "compression_ratio": 1.0,
+    "inference_ms": 107.99239691595703,
+    "method_key": "baseline"
+  },
+  {
+    "method": "Magnitude Pruning",
+    "dataset": "ag_news",
+    "sparsity": 0.5,
+    "accuracy": 0.9357894736842105,
+    "f1_macro": 0.935768425846514,
+    "params_total": 59871748,
+    "params_nonzero": 59871748,
+    "compression_ratio": 0.8941880934483062,
+    "inference_ms": 93.81744381096938,
+    "method_key": "magnitude",
+    "pruning_info": {
+      "method": "magnitude",
+      "sparsity_target": 0.5,
+      "heads_total": 72,
+      "heads_pruned": 36,
+      "pruned_heads": [
+        {
+          "layer": 0,
+          "head": 6,
+          "magnitude_score": 13.93016529083252
+        },
+        {
+          "layer": 0,
+          "head": 0,
+          "magnitude_score": 14.156950950622559
+        },
+        {
+          "layer": 0,
+          "head": 4,
+          "magnitude_score": 14.233436584472656
+        },
+        {
+          "layer": 0,
+          "head": 3,
+          "magnitude_score": 14.357356071472168
+        },
+        {
+          "layer": 0,
+          "head": 8,
+          "magnitude_score": 14.359548568725586
+        },
+        {
+          "layer": 0,
+          "head": 9,
+          "magnitude_score": 14.387429237365723
+        },
+        {
+          "layer": 0,
+          "head": 7,
+          "magnitude_score": 14.833272933959961
+        },
+        {
+          "layer": 0,
+          "head": 1,
+          "magnitude_score": 15.213834762573242
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "magnitude_score": 15.442098617553711
+        },
+        {
+          "layer": 1,
+          "head": 3,
+          "magnitude_score": 15.974258422851562
+        },
+        {
+          "layer": 0,
+          "head": 5,
+          "magnitude_score": 16.066709518432617
+        },
+        {
+          "layer": 2,
+          "head": 10,
+          "magnitude_score": 16.239347457885742
+        },
+        {
+          "layer": 1,
+          "head": 5,
+          "magnitude_score": 16.561872482299805
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "magnitude_score": 16.664304733276367
+        },
+        {
+          "layer": 1,
+          "head": 11,
+          "magnitude_score": 16.71026611328125
+        },
+        {
+          "layer": 1,
+          "head": 2,
+          "magnitude_score": 16.80983543395996
+        },
+        {
+          "layer": 2,
+          "head": 9,
+          "magnitude_score": 16.89718246459961
+        },
+        {
+          "layer": 1,
+          "head": 6,
+          "magnitude_score": 16.911123275756836
+        },
+        {
+          "layer": 1,
+          "head": 7,
+          "magnitude_score": 17.02606964111328
+        },
+        {
+          "layer": 2,
+          "head": 8,
+          "magnitude_score": 17.227636337280273
+        },
+        {
+          "layer": 0,
+          "head": 11,
+          "magnitude_score": 17.44656753540039
+        },
+        {
+          "layer": 1,
+          "head": 10,
+          "magnitude_score": 17.446836471557617
+        },
+        {
+          "layer": 0,
+          "head": 10,
+          "magnitude_score": 17.483686447143555
+        },
+        {
+          "layer": 3,
+          "head": 5,
+          "magnitude_score": 17.54142951965332
+        },
+        {
+          "layer": 2,
+          "head": 4,
+          "magnitude_score": 17.754884719848633
+        },
+        {
+          "layer": 3,
+          "head": 2,
+          "magnitude_score": 17.7572078704834
+        },
+        {
+          "layer": 2,
+          "head": 7,
+          "magnitude_score": 17.790681838989258
+        },
+        {
+          "layer": 3,
+          "head": 9,
+          "magnitude_score": 17.828933715820312
+        },
+        {
+          "layer": 4,
+          "head": 11,
+          "magnitude_score": 17.85902214050293
+        },
+        {
+          "layer": 2,
+          "head": 11,
+          "magnitude_score": 17.865556716918945
+        },
+        {
+          "layer": 4,
+          "head": 8,
+          "magnitude_score": 17.934646606445312
+        },
+        {
+          "layer": 3,
+          "head": 10,
+          "magnitude_score": 17.97205924987793
+        },
+        {
+          "layer": 2,
+          "head": 2,
+          "magnitude_score": 17.990291595458984
+        },
+        {
+          "layer": 5,
+          "head": 2,
+          "magnitude_score": 18.006181716918945
+        },
+        {
+          "layer": 1,
+          "head": 8,
+          "magnitude_score": 18.020355224609375
+        },
+        {
+          "layer": 3,
+          "head": 11,
+          "magnitude_score": 18.1724853515625
+        }
+      ]
+    }
+  }
+]

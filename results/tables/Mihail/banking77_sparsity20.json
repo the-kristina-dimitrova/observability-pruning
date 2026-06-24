@@ -1,0 +1,210 @@
+[
+  {
+    "method": "Baseline (unpruned)",
+    "dataset": "banking77",
+    "sparsity": 0.0,
+    "accuracy": 0.9149350649350649,
+    "f1_macro": 0.9149111296773904,
+    "params_total": 67012685,
+    "params_nonzero": 67012685,
+    "compression_ratio": 1.0,
+    "inference_ms": 100.2204506907613,
+    "method_key": "baseline"
+  },
+  {
+    "method": "Magnitude Pruning",
+    "dataset": "banking77",
+    "sparsity": 0.2,
+    "accuracy": 0.9103896103896104,
+    "f1_macro": 0.9103999458072967,
+    "params_total": 64257485,
+    "params_nonzero": 64257485,
+    "compression_ratio": 0.9588853961007532,
+    "inference_ms": 94.19934460824076,
+    "method_key": "magnitude",
+    "pruning_info": {
+      "method": "magnitude",
+      "sparsity_target": 0.2,
+      "heads_total": 72,
+      "heads_pruned": 14,
+      "pruned_heads": [
+        {
+          "layer": 0,
+          "head": 6,
+          "magnitude_score": 13.948590278625488
+        },
+        {
+          "layer": 0,
+          "head": 0,
+          "magnitude_score": 14.145527839660645
+        },
+        {
+          "layer": 0,
+          "head": 4,
+          "magnitude_score": 14.235936164855957
+        },
+        {
+          "layer": 0,
+          "head": 3,
+          "magnitude_score": 14.355692863464355
+        },
+        {
+          "layer": 0,
+          "head": 8,
+          "magnitude_score": 14.371650695800781
+        },
+        {
+          "layer": 0,
+          "head": 9,
+          "magnitude_score": 14.397504806518555
+        },
+        {
+          "layer": 0,
+          "head": 7,
+          "magnitude_score": 14.838760375976562
+        },
+        {
+          "layer": 0,
+          "head": 1,
+          "magnitude_score": 15.213303565979004
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "magnitude_score": 15.447005271911621
+        },
+        {
+          "layer": 1,
+          "head": 3,
+          "magnitude_score": 15.970258712768555
+        },
+        {
+          "layer": 0,
+          "head": 5,
+          "magnitude_score": 16.057729721069336
+        },
+        {
+          "layer": 2,
+          "head": 10,
+          "magnitude_score": 16.249746322631836
+        },
+        {
+          "layer": 1,
+          "head": 5,
+          "magnitude_score": 16.561992645263672
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "magnitude_score": 16.678157806396484
+        }
+      ]
+    }
+  },
+  {
+    "method": "Lottery Ticket",
+    "dataset": "banking77",
+    "sparsity": 0.2,
+    "accuracy": 0.5055194805194805,
+    "f1_macro": 0.4492648976045305,
+    "params_total": 64257485,
+    "params_nonzero": 64257485,
+    "compression_ratio": 0.9588853961007532,
+    "inference_ms": 95.6373571134651,
+    "method_key": "lottery_ticket",
+    "pruning_info": {
+      "method": "lottery_ticket",
+      "sparsity_target": 0.2,
+      "heads_total": 72,
+      "heads_pruned": 14,
+      "mask_rounds": 3,
+      "rewind_used": true,
+      "pruned_heads": [
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 6,
+          "magnitude_score": 13.948590278625488
+        },
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 0,
+          "magnitude_score": 14.145527839660645
+        },
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 4,
+          "magnitude_score": 14.235936164855957
+        },
+        {
+          "round": 1,
+          "layer": 0,
+          "head": 3,
+          "magnitude_score": 14.355692863464355
+        },
+        {
+          "round": 2,
+          "layer": 0,
+          "head": 8,
+          "magnitude_score": 14.371650695800781
+        },
+        {
+          "round": 2,
+          "layer": 0,
+          "head": 9,
+          "magnitude_score": 14.397504806518555
+        },
+        {
+          "round": 2,
+          "layer": 0,
+          "head": 7,
+          "magnitude_score": 14.838760375976562
+        },
+        {
+          "round": 2,
+          "layer": 0,
+          "head": 1,
+          "magnitude_score": 15.213303565979004
+        },
+        {
+          "round": 2,
+          "layer": 2,
+          "head": 1,
+          "magnitude_score": 15.447005271911621
+        },
+        {
+          "round": 3,
+          "layer": 1,
+          "head": 3,
+          "magnitude_score": 15.970258712768555
+        },
+        {
+          "round": 3,
+          "layer": 0,
+          "head": 5,
+          "magnitude_score": 16.057729721069336
+        },
+        {
+          "round": 3,
+          "layer": 2,
+          "head": 10,
+          "magnitude_score": 16.249746322631836
+        },
+        {
+          "round": 3,
+          "layer": 1,
+          "head": 5,
+          "magnitude_score": 16.561992645263672
+        },
+        {
+          "round": 3,
+          "layer": 2,
+          "head": 5,
+          "magnitude_score": 16.678157806396484
+        }
+      ]
+    }
+  }
+]
